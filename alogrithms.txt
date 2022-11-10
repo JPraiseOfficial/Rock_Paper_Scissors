@@ -1,4 +1,15 @@
 1. Get Computer Choice
+    - 
+
 2. Get User's Choice
+    - Use prompt to get user's choice
+    - Capitalize user's input before processing it
 3. Compare both Choices
+    - Test if:
+        * Player's input is wrong
+        * There is a draw
 4. Declare the winner
+    RULE OF GAME
+        * Rock beats Scissors
+        * Scissors beat Paper
+        * Paper beats Rock
