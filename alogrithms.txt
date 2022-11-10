@@ -1,0 +1,4 @@
+1. Get Computer Choice
+2. Get User's Choice
+3. Compare both Choices
+4. Declare the winner
