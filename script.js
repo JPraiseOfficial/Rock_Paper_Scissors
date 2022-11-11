@@ -26,29 +26,51 @@ function playRound(computerSelection, playerSelection) {
 
     // Tests if Player entered wrong input
     if (playerSelection !== 'ROCK' && playerSelection !== 'PAPER' && playerSelection !== 'SCISSORS') {
-        console.error(`Wrong input!!! You entered ${playerSelection}. Check your spellings and try again.`)
+        let message = `Wrong input!!! You entered ${playerSelection}. Check your spellings and try again.`
+        console.error(message)
+        return message
     }
 
     // Determines if there is no winner
     else if (computerSelection == playerSelection) {
-        console.log(`Ooops! This is a draw as ${computerSelection} cannot beat ${playerSelection} There is no winner, Try Again!!!`)
+        let message = `%c Ooops! This is a draw as ${computerSelection} cannot beat ${playerSelection} There is no winner, Try Again!!!`
+        console.log(message, 'background:yellow; font-weight:bold; color:black')
+        return message
     }
 
     // Determines the Winner
     else if (
-        computerSelection == 'ROCK' && playerSelection == "SCISSORS" || computerSelection == 'SCISSORS' && playerSelection == "PAPER" || 
+        computerSelection == 'ROCK' && playerSelection == "SCISSORS" || 
+        computerSelection == 'SCISSORS' && playerSelection == "PAPER" || 
         computerSelection == 'PAPER' && playerSelection == "ROCK") {
-        console.info(`%c Ooops! You Lose. ${computerSelection} beats ${playerSelection}.`, 'background: red; font-weight: bold; color:white')
+            let message = `%c Ooops! You lose. ${computerSelection} beats ${playerSelection}.`
+            console.log(message, 'background: red; font-weight: bold; color:white')
+            return message
     } 
-    else {console.info(`%c Hooray!!! You won. ${playerSelection} beats ${computerSelection}`, 'background: green; font-weight: bold; color:white')}
-
+    else {
+        let message = `%c Hooray!!! You won. ${playerSelection} beats ${computerSelection}`
+        console.log(message, 'background: green; font-weight: bold; color:white')
+        return message
+    }
 }
 
 // Game
 function game(params) {
+    let wins = 0
+    let lose = 0
     for (let i = 1; i <= 5; i++) {
-        playRound()
+        console.log(`%c ROUND ${i}`, 'font-weight:bold; color:blue')
+        let game = playRound()
+
+        if (game.includes('You won')) {
+            wins += 1
+        } else if (game.includes('You lose')) {
+            lose += 1
+        }        
     }
+    console.log('%c FINAL SCORES', 'color:blue; font-weight:bold')
+    let result = [{Computer:`${lose}`, Player:`${wins}`}]
+    console.table(result)
 
 }
 
