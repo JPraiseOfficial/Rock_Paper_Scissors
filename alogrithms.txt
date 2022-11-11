@@ -8,8 +8,14 @@
     - Test if:
         * Player's input is wrong
         * There is a draw
-4. Declare the winner
+4. Declare the winner for that play round
     RULE OF GAME
         * Rock beats Scissors
         * Scissors beat Paper
         * Paper beats Rock
+5. Create a 5-times loop for the game and declare the real winner for the game.
+    - Create function 'game':
+    * Use loop to repeat function playround
+    * Create variable to hold number of wins 
+    * Create variable to hold total number of losses
+    * If wins > losses, console.log("You win") else console.log("You lose")

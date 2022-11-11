@@ -16,6 +16,14 @@ function getPlayerChoice() {
 
 // PlayRound
 function playRound(computerSelection, playerSelection) {
+    // Choices selected
+    computerSelection = getComputerChoice();
+    playerSelection = getPlayerChoice();
+
+    // Display choices into console.log
+    console.log(`Computer's choice is ${computerSelection}`)
+    console.log(`Player's choice is ${playerSelection}`)
+
     // Tests if Player entered wrong input
     if (playerSelection !== 'ROCK' && playerSelection !== 'PAPER' && playerSelection !== 'SCISSORS') {
         console.error(`Wrong input!!! You entered ${playerSelection}. Check your spellings and try again.`)
@@ -26,20 +34,22 @@ function playRound(computerSelection, playerSelection) {
         console.log(`Ooops! This is a draw as ${computerSelection} cannot beat ${playerSelection} There is no winner, Try Again!!!`)
     }
 
-    // Determines Winner between ROCK and SCISSORS
+    // Determines the Winner
     else if (
         computerSelection == 'ROCK' && playerSelection == "SCISSORS" || computerSelection == 'SCISSORS' && playerSelection == "PAPER" || 
         computerSelection == 'PAPER' && playerSelection == "ROCK") {
-        console.log(`Ooops! You Lose. ${computerSelection} beats ${playerSelection}.`)
+        console.info(`%c Ooops! You Lose. ${computerSelection} beats ${playerSelection}.`, 'background: red; font-weight: bold; color:white')
     } 
-    else {console.log(`Hooray!!! You won. ${playerSelection} beats ${computerSelection}`)}
+    else {console.info(`%c Hooray!!! You won. ${playerSelection} beats ${computerSelection}`, 'background: green; font-weight: bold; color:white')}
 
 }
 
-const computerSelection = getComputerChoice();
-const playerSelection = getPlayerChoice();
+// Game
+function game(params) {
+    for (let i = 1; i <= 5; i++) {
+        playRound()
+    }
 
-console.log(`Computer's choice is ${computerSelection}`)
-console.log(`Player's choice is ${playerSelection}`)
+}
 
-playRound(computerSelection, playerSelection)
+game()
