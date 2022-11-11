@@ -1,5 +1,7 @@
 1. Get Computer Choice
-    - 
+    - Create an array containing the Choices (Rock, Paper, Scissors)
+    - Use Math.random and Math.floor to generate random ID
+    - Use the random ID with the array to get a random item
 
 2. Get User's Choice
     - Use prompt to get user's choice
