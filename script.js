@@ -56,21 +56,31 @@ function playRound(computerSelection, playerSelection) {
 
 // Game
 function game(params) {
-    let wins = 0
-    let lose = 0
+    let playerScore = 0
+    let computerScore = 0
     for (let i = 1; i <= 5; i++) {
         console.log(`%c ROUND ${i}`, 'font-weight:bold; color:blue')
         let game = playRound()
 
         if (game.includes('You won')) {
-            wins += 1
+            playerScore += 1
         } else if (game.includes('You lose')) {
-            lose += 1
+            computerScore += 1
         }        
     }
+
+    // Displays Result of Game
     console.log('%c FINAL SCORES', 'color:blue; font-weight:bold')
-    let result = [{Computer:`${lose}`, Player:`${wins}`}]
+    let result = [{Computer:`${computerScore}`, Player:`${playerScore}`}]
     console.table(result)
+
+    if (playerScore > computerScore) {
+        console.log('%c HOORAY!!! YOU FINALLY MADE IT. \n YOU ARE A CHAMPION INDEED', 'background:green; color:white; font-weight:bold')
+    } else if (playerScore = computerScore) {
+        console.log('%c This is a draw, please try again.', 'background:yellow; color:black; font-weight:bold ')
+    } else {
+        console.log('%c So Sorry you didn\'t make it \n Try Again', 'background:red; color:white; font-weight:bold ')
+    }
 
 }
 

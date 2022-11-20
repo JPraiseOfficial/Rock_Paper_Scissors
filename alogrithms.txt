@@ -18,6 +18,6 @@
 5. Create a 5-times loop for the game and declare the real winner for the game.
     - Create function 'game':
     * Use loop to repeat function playround
-    * Create variable to hold number of wins 
-    * Create variable to hold total number of losses
-    * If wins > losses, console.log("You win") else console.log("You lose")
+    * Create variable 'playerScore' to hold number of wins 
+    * Create variable 'computerScore' to hold total number of losses
+    * If playerScore > computerScore, console.log("You win") else console.log("You lose")
