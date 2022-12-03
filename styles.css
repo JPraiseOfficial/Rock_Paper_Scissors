@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.frontbar {
+    padding: 10px 35px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: yellow;
+}
+.game-name {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    text-shadow: 5px 5px 2px black;
+}
+.rock {
+    color: brown;
+}
+.paper {
+    color: grey;
+}
+.scissors {
+    color: steelblue;
+}
+.game-rules {
+    margin-left: auto;
+    border: 5px dashed black;
+    padding: 20px 30px;
+}
+.game-rules h2 {
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* text-shadow: 2px 2px 2px black; */
+}
