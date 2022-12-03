@@ -64,3 +64,52 @@ body {
 .game-round h1 span {
     color: yellow;
 }
+.game-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+    margin: 30px;
+}
+.buttons {
+    color: white;
+    padding: 30px;
+    border-radius: 30px;
+    width: 180px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5em;
+}
+#rock {
+    background: brown;
+}
+#rock:hover {
+    background: white;
+    color: brown;
+}
+#rock:active {
+    background: black;
+    color: white
+}
+#paper {
+    background: grey;
+}
+#paper:hover {
+    background: white;
+    color: grey;
+}
+#paper:active {
+    background: black;
+    color: white
+}
+#scissors {
+    background: steelblue;
+    font-size: 2em;
+}
+#scissors:hover {
+    background: white;
+    color: steelblue;
+}
+#scissors:active {
+    background: black;
+    color: white
+}
