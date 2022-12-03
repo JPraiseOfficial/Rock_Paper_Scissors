@@ -159,3 +159,9 @@ body {
     border-left: 5px outset black;
     border-radius: 10px;
 }
+.footer {
+    background: black;
+    color: gray;
+    text-align: center;
+    padding: 30px;
+}
