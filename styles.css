@@ -3,13 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    background: url(./img/bg.jpg);
+}
+.container {
+    /* margin: ; */
+}
 .frontbar {
     padding: 10px 35px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    background: yellow;
+    border-bottom: 2px solid grey;
 }
 .game-name {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -34,4 +39,16 @@
     color: red;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* text-shadow: 2px 2px 2px black; */
+}
+.welcome {
+    padding: 8vh 15vw;
+}
+.welcome-text {
+    color: darkgreen;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.welcome-text > span {
+    color: red;
 }
