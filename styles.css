@@ -6,9 +6,7 @@
 body {
     background: url(./img/bg.jpg);
 }
-.container {
-    /* margin: ; */
-}
+
 .frontbar {
     padding: 10px 35px;
     display: flex;
@@ -51,4 +49,18 @@ body {
 }
 .welcome-text > span {
     color: red;
+}
+.game-round {
+    text-align: center;
+}
+.game-round h1 {
+    display: inline-block;
+    background: steelblue;
+    padding: 20px 30px;
+    font-size: 2.3em;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.game-round h1 span {
+    color: yellow;
 }
