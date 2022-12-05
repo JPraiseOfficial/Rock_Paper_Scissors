@@ -114,18 +114,24 @@ body {
     background: black;
     color: white
 }
-.result {
+.result-panel {
     margin: 50px;
-    font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
+}
+.result-panel p {
+    padding: 12px;
+}
+#result {
+    color: deepskyblue;
+    text-shadow: 2px 2px 2px black;
+    font-size: 3em;
+}
+#analysis {
     color: white;
     text-shadow: 2px 2px 2px black;
-}
-.result span {
-    display: block;
-    padding: 15px;
+    font-size: 2.5em;
 }
 .win {
     background: green;
@@ -134,7 +140,7 @@ body {
     background: red;
 }
 .draw {
-    background: yellow;
+    background: orange;
 }
 .scoreboard {
     display: flex;
