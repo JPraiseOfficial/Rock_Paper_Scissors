@@ -22,17 +22,16 @@ const scissors = document.querySelector('#scissors')
 
 let playerChoice = '';
 
-function getPlayerChoice() {
-    rock.addEventListener('click', () => {
-        let playerChoice = 'ROCK'
-        console.log(playerChoice)
-    })
-    paper.addEventListener('click', () => {
-        let playerChoice = 'PAPER'
-        console.log(playerChoice)
-    })
-    scissors.addEventListener('click', () => {
-        let playerChoice = 'SCISSORS'
-        console.log(playerChoice)
-    })
-}
+rock.addEventListener('click', () => {
+    playerChoice = 'ROCK';
+});
+paper.addEventListener('click', () => {
+    playerChoice = 'PAPER';
+});
+scissors.addEventListener('click', () => {
+    playerChoice = 'SCISSORS';
+});
+
+
+
+
