@@ -45,29 +45,46 @@ function playRound(playerSelection) {
     }
 }
 
-const currentRound = document.querySelector('#currentRound')
-const playerScore = document.querySelector('#playerScore')
-const computerScore = document.querySelector('#computerScore')
+const currentRound = document.querySelector('#currentRound');
+const playerScore = document.querySelector('#playerScore');
+const computerScore = document.querySelector('#computerScore');
+const welcome = document.querySelector('.welcome');
+const htmlGame = document.querySelector('.game');
+const gameOver = document.querySelector('.game-over');
+const finalResult = document.querySelector('#finalResult');
 
-let round = 1
-let wins = 0
-let lose = 0
+let round = 1;
+let wins = 0;
+let lose = 0;
 
 // Game
 function game(playerSelection) {
-    let gameround = playRound(playerSelection);
+    let playRoundResult = playRound(playerSelection);
     
-    if (gameround.includes('YOU WON')) {
-        wins += 1;
-        playerScore.textContent = wins;
-    } else if (gameround.includes('YOU LOSE')) {
-        lose += 1
-        computerScore.textContent = lose;
+    if (playRoundResult.includes('YOU WON')) {
+        playerScore.textContent = ++wins;
+    } else if (playRoundResult.includes('YOU LOSE')) {
+        computerScore.textContent = ++lose;
     } else {
 
     }
-    round += 1;
-    currentRound.textContent = round;
+    currentRound.textContent = ++round;
+
+    if (wins == 5) {
+        welcome.classList.toggle('hidden');
+        htmlGame.classList.toggle('hidden');
+        gameOver.classList.toggle('hidden');
+
+        finalResult.textContent = 'HOORAY! YOU WON'
+        finalResult.style.color = 'green'
+    } else if (lose == 5) {
+        welcome.classList.toggle('hidden');
+        htmlGame.classList.toggle('hidden');
+        gameOver.classList.toggle('hidden');
+
+        finalResult.textContent = 'Oops! YOU LOSE'
+        finalResult.style.color = 'red'
+    }
 }
 
 

@@ -133,15 +133,6 @@ body {
     text-shadow: 2px 2px 2px black;
     font-size: 2.5em;
 }
-.win {
-    background: green;
-}
-.lose {
-    background: red;
-}
-.draw {
-    background: orange;
-}
 .scoreboard {
     display: flex;
     border: 5px solid black;
@@ -170,4 +161,48 @@ body {
     color: gray;
     text-align: center;
     padding: 30px;
+}
+.game-over {
+    background: brown;
+    opacity: 70%;
+    text-align: center;
+    margin: 10vh 10vw;
+    border-radius: 40px;
+    padding: 30px;
+}
+.game-over h1 {
+    font-size: 5em;
+    color: aqua;
+    text-shadow: 3px 3px 2px black;
+    padding: 10px;
+}
+.game-over span {
+    display: block;
+    font-size: 4em;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 3px 3px 2px black;
+}
+.game-over a button {
+    background: steelblue;
+    color: white;
+    padding: 30px;
+    border-radius: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.8em;
+    text-shadow: 2px 2px 2px black;
+}
+.game-over a button:hover {
+    background: grey;
+    color: black;
+    text-shadow: 2px 2px 2px white;
+}
+.game-over a button:active {
+    background: black;
+    color: white;
+    text-shadow: 0px 0px 0px black;
+}
+.hidden {
+    display: none;
 }
